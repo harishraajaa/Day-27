@@ -30,15 +30,15 @@ function Users() {
   const handledelete=async(id)=>{
     try{
       let res= await axios.delete(`https://6678ff700bd4525056209675.mockapi.io/api/v1/users/${id}`)
-      console.log(res)
+      //console.log(res)
       if (res.status===200){        
-        toast.success("User Data fetched")
+        toast.success("User Data Deleted")
         getData()
       }
       
     }
     catch(error){
-      console.log(error.response.data)
+      //console.log(error.response.data)
       toast.error(error.response.data)
     }
   }

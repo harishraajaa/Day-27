@@ -89,7 +89,7 @@ function Create() {
   const getData=async()=>{
     try{
       let res= await axios.get(`https://6678ff700bd4525056209675.mockapi.io/api/v1/users/${id}`)
-      console.log(res)
+      //console.log(res)
       if (res.status===200){
         setInitialState({
           Name:res.data.Name,
@@ -104,7 +104,7 @@ function Create() {
       
     }
     catch(error){
-      console.log(error.response.data)
+      //console.log(error.response.data)
       toast.error(error.response.data)
     }
     
